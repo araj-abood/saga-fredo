@@ -7,14 +7,14 @@ const Categories = ({ menu }) => {
   const { categories } = menu;
   const [selected, setSelected] = useState(0);
 
-  const selectedItems = categories[selected].items || false;
-
   useEffect(() => {
     setSelected(0);
-  }, [categories]);
+  }, [menu]);
+
+  const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-[500px] bg-neutral-900 min-h-[600px] text-white pt-5   overflow-hidden">
+    <div className="w-[550px] bg-neutral-900 min-h-[600px] text-white pt-5   overflow-hidden">
       <div className="relative border-b border-neutral-200">
         <div
           style={{ translate: `-${selected * 50}px` }}
@@ -55,8 +55,15 @@ const Categories = ({ menu }) => {
           />
         )}
       </div>
-      {selectedItems ? (
-        <PlateItems items={selectedItems} />
+
+      {selectedItems.length !== 0 ? (
+        <>
+          {" "}
+          <h2 className="text-center text-4xl mt-3 text-red-50">
+            {categories[selected].title}
+          </h2>
+          <PlateItems items={selectedItems} />
+        </>
       ) : (
         <h1 className="text-4xl text-center mt-10">No items</h1>
       )}
