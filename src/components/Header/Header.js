@@ -30,7 +30,7 @@ const Header = () => {
     <motion.header
       className="fixed bg-red-500/40 w-full py-5 px-4 top-0 left-0 z-10"
       animate={show ? "open" : "closed"}
-      transition={{ delay: 0.5 }}
+      transition={{ delay: 0.1 }}
       variants={variants}
     >
       <div className="flex justify-center ">

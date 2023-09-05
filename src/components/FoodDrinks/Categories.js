@@ -14,7 +14,7 @@ const Categories = ({ menu }) => {
   const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-[550px] bg-neutral-900 min-h-[600px] text-white pt-5   overflow-hidden">
+    <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 pb-10   overflow-hidden">
       <div className="relative border-b border-neutral-200">
         <div
           style={{ translate: `-${selected * 50}px` }}

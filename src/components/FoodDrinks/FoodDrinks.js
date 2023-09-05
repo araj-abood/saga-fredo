@@ -17,9 +17,9 @@ const FoodDrinks = () => {
             setActive(type);
           }}
         />
-        <div className=" flex max-md:flex-col">
+        <div className="relative flex max-lg:flex-col">
           <Categories menu={active === "food" ? menu[0] : menu[1]} />
-          <div className="flex-1">
+          <div className=" flex-1">
             <DisplayItem />
           </div>
         </div>
