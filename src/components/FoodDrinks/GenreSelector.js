@@ -7,7 +7,7 @@ const GenreSelector = ({ active, setActive }) => {
         onClick={() => {
           setActive("food");
         }}
-        className={`flex-1 py-3 text-5xl text-center  ${
+        className={`flex-1 py-1 lg:py-3 text-4xl lg:text-5xl text-center  ${
           active === "food" ? "bg-neutral-200 text-red-500" : "bg-neutral-700"
         }`}
       >
@@ -17,7 +17,7 @@ const GenreSelector = ({ active, setActive }) => {
         onClick={() => {
           setActive("drink");
         }}
-        className={`flex-1 py-3 text-5xl text-center  ${
+        className={`flex-1 py-1 lg:py-3 text-4xl lg:text-5xl text-center  ${
           active === "drink" ? "bg-neutral-200" : "bg-neutral-700"
         } `}
       >

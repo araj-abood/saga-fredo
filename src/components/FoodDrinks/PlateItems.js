@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { ItemContext } from "../../context/item-context";
+import { CartContext } from "../../context/cart-context";
 
 const PlateItems = ({ items }) => {
   const itemContext = useContext(ItemContext);
+  const cartContext = useContext(CartContext);
 
   return (
     <div className="flex flex-col mt-5 gap-4 px-5 ">
@@ -11,7 +13,10 @@ const PlateItems = ({ items }) => {
           <div className="flex gap-3 rounded-lg overflow-hidden">
             <div className="w-[140px] h-[140px]">
               <img
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover cursor-pointer"
+                onClick={() => {
+                  itemContext.selectItemHandler(item);
+                }}
                 src={item.img}
                 alt=""
               />
@@ -35,7 +40,12 @@ const PlateItems = ({ items }) => {
                 </div>
               </div>
               <div className="flex  items-end">
-                <button className="bg-red-800 py-2 px-4 text-2xl transition-all duration-150 hover:bg-red-500">
+                <button
+                  onClick={() => {
+                    cartContext.addItemHandler(null, 1);
+                  }}
+                  className="bg-red-800 py-2 px-4 text-2xl transition-all duration-150 hover:bg-red-500"
+                >
                   Add
                 </button>
               </div>
