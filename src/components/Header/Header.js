@@ -29,13 +29,41 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed bg-red-500/40 w-full  py-3 lg:py-5 px-4 top-0 left-0 z-10"
+      className="fixed bg-red-500/40 w-full h-[80px]  py-3 lg:py-5  px-2 lg:px-4 top-0 left-0 z-10"
       animate={show ? "open" : "closed"}
       transition={{ delay: 0.1 }}
       variants={variants}
     >
-      <div className="flex justify-center px-7 ">
-        <div className="">
+      <div className="flex h-full justify-between items-center px-7 relative  ">
+        <div className="text-white flex gap-5 text-xl">
+          <a
+            className="hover:underline underline-[2px] underline-[0px] transition-all duration-100"
+            href=""
+          >
+            Our Menu
+          </a>
+          <a
+            className="hover:underline underline-[2px] underline-[0px] transition-all duration-100"
+            href=""
+          >
+            Our location
+          </a>
+        </div>
+        <div className="text-white flex gap-5 text-xl">
+          <a
+            className="hover:underline underline-[2px] underline-[0px] transition-all duration-100"
+            href=""
+          >
+            About us
+          </a>
+          <a
+            className="hover:underline underline-[2px] underline-[0px] transition-all duration-100"
+            href=""
+          >
+            Sign in
+          </a>
+        </div>{" "}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <img
             src="https://segafredojo.com/cdn/shop/files/Logo-S-AI-white-s-white_200x.png?v=1683461848"
             alt=""
