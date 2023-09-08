@@ -3,6 +3,9 @@ import CategoryItem from "./CategoryItem";
 import Arrow from "../UI/Arrow";
 import PlateItems from "./PlateItems";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import CategorySwiper from "./CategorySwiper";
+
 const Categories = ({ menu }) => {
   const { categories } = menu;
   const [selected, setSelected] = useState(0);
@@ -16,24 +19,11 @@ const Categories = ({ menu }) => {
   return (
     <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 pb-10   overflow-hidden">
       <div className="relative border-b border-neutral-200">
-        <div
-          style={{ translate: `-${selected * 180}px` }}
-          className={` w-full transition-all duration-150 ease-out  top-0 left-0 flex flex-row gap-5 pb-5 h-[200px]`}
-        >
-          {categories.map((cat, index) => {
-            return (
-              <CategoryItem
-                key={cat.title}
-                img={cat.img}
-                onClick={() => {
-                  setSelected(index);
-                }}
-                selected={selected === index}
-                title={cat.title}
-              />
-            );
-          })}
-        </div>
+        <CategorySwiper
+          selected={selected}
+          setSelected={setSelected}
+          categories={categories}
+        />
 
         {selected !== 0 && (
           <Arrow

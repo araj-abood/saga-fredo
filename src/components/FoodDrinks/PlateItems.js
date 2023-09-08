@@ -8,9 +8,12 @@ const PlateItems = ({ items }) => {
 
   return (
     <div className="flex flex-col mt-5 gap-4 px-5 ">
-      {items.map((item) => {
+      {items.map((item, index) => {
         return (
-          <div className="flex gap-3 rounded-lg overflow-hidden">
+          <div
+            key={`${item.title} ${index}`}
+            className="flex gap-3 rounded-lg overflow-hidden"
+          >
             <div className="w-[140px] h-[140px]">
               <img
                 className="h-full w-full object-cover cursor-pointer"
