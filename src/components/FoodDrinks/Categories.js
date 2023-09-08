@@ -17,7 +17,7 @@ const Categories = ({ menu }) => {
     <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 pb-10   overflow-hidden">
       <div className="relative border-b border-neutral-200">
         <div
-          style={{ translate: `-${selected * 50}px` }}
+          style={{ translate: `-${selected * 180}px` }}
           className={` w-full transition-all duration-150 ease-out  top-0 left-0 flex flex-row gap-5 pb-5 h-[200px]`}
         >
           {categories.map((cat, index) => {
