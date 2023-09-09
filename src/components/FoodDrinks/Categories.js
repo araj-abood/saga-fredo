@@ -17,8 +17,8 @@ const Categories = ({ menu }) => {
   const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 pb-10   overflow-hidden">
-      <div className="relative border-b border-neutral-200">
+    <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 overflow-hidden">
+      <div className="relative border-b py-2 border-neutral-200">
         <CategorySwiper
           selected={selected}
           setSelected={setSelected}
@@ -49,7 +49,7 @@ const Categories = ({ menu }) => {
       {selectedItems.length !== 0 ? (
         <>
           {" "}
-          <h2 className="text-center text-4xl mt-3 text-red-50">
+          <h2 className="text-center text-4xl mt-3 text-white border-b border-white pb-2">
             {categories[selected].title}
           </h2>
           <PlateItems items={selectedItems} />

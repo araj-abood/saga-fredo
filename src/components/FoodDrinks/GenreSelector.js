@@ -18,7 +18,7 @@ const GenreSelector = ({ active, setActive }) => {
           setActive("drink");
         }}
         className={`flex-1 py-1 lg:py-3 text-4xl lg:text-5xl text-center  ${
-          active === "drink" ? "bg-neutral-200" : "bg-neutral-700"
+          active === "drink" ? "text-red-500 bg-neutral-200" : "bg-neutral-700"
         } `}
       >
         Drink

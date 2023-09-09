@@ -18,19 +18,19 @@ const CategoryItem = ({ title, img, selected, onClick }) => {
         />
       </div>
       <p
-        className={`text-center uppercase transition-all duration-200 text-[23px] ${
+        className={`text-center relative uppercase transition-all duration-200 text-[23px] ${
           selected && "text-red-600 mt-5"
         } `}
       >
         {title}
-      </p>
 
-      {selected && (
-        <motion.div
-          className=" absolute h-1 w-full -bottom-1 left-0 bg-red-600"
-          layoutId="underline"
-        ></motion.div>
-      )}
+        {selected && (
+          <motion.div
+            className=" absolute h-1 w-full -bottom-1 left-0 bg-red-600"
+            layoutId="underline"
+          ></motion.div>
+        )}
+      </p>
     </div>
   );
 };
