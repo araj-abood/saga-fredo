@@ -30,14 +30,14 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed bg-red-500/40 w-full h-[80px]  py-1 lg:py-5  px-2 lg:px-4 top-0 left-0  "
+      className=" main-hero relative bg-red-500/40 w-full h-[50px]  py-1 lg:py-5  px-2 lg:px-4 top-0 left-0  "
       // animate={show ? "open" : "closed"}
       transition={{ delay: 0.1 }}
       variants={variants}
     >
       <div className="flex h-full justify-between items-center px-2 text-xl lg:text-3xl lg:px-5 relative text-white  ">
         <a
-          className="hover:underline cursor-pointer underline-[2px] underline-[0px] transition-all duration-100"
+          className="hover:underline text-lg cursor-pointer underline-[2px] underline-[0px] transition-all duration-100"
           href=""
         >
           Our Menu
@@ -48,7 +48,7 @@ const Header = () => {
         <img
           src="https://segafredojo.com/cdn/shop/files/Logo-S-AI-white-s-white_200x.png?v=1683461848"
           alt=""
-          className="w-10 lg:w-14"
+          className="w-5 lg:w-6"
         />
       </div>
     </motion.header>

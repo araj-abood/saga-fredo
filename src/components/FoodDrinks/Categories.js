@@ -18,7 +18,7 @@ const Categories = ({ menu }) => {
 
   return (
     <div className="w-full lg:w-[500px]  bg-neutral-900 max-h-full text-white pt-5 overflow-hidden">
-      <div className="relative border-b py-2 border-neutral-200">
+      <div className="relative border-b-[3px] py-2 border-red-700">
         <CategorySwiper
           selected={selected}
           setSelected={setSelected}
@@ -49,9 +49,6 @@ const Categories = ({ menu }) => {
       {selectedItems.length !== 0 ? (
         <>
           {" "}
-          <h2 className="text-center text-4xl mt-3 text-white border-b border-white pb-2">
-            {categories[selected].title}
-          </h2>
           <PlateItems items={selectedItems} />
         </>
       ) : (

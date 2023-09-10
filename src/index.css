@@ -7,8 +7,8 @@
 .main-hero {
   background: linear-gradient(
       to right,
-      rgba(239, 68, 68, 0.1),
-      rgba(239, 68, 68, 0.1)
+      rgb(239, 68, 68, 0.4),
+      rgb(239, 68, 68, 0.4)
     ),
     url("https://segafredojo.com/cdn/shop/collections/1L4A7696.jpg?v=1623919964&width=2000");
   background-attachment: fixed;
@@ -17,6 +17,8 @@
 body {
   /* font-family: "Roboto Slab", serif; */
   font-family: "Oswald", sans-serif;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 @layer utilities {

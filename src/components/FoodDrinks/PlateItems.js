@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ItemContext } from "../../context/item-context";
 import { CartContext } from "../../context/cart-context";
 
@@ -7,7 +7,7 @@ const PlateItems = ({ items }) => {
   const cartContext = useContext(CartContext);
 
   return (
-    <div className="h-[400px]  overflow-y-scroll">
+    <div className={`h-[400px] overflow-y-scroll `}>
       <div className="flex flex-col mt-5 gap-4 px-5  ">
         {items.map((item, index) => {
           return (

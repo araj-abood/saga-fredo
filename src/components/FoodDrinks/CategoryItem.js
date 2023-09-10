@@ -5,7 +5,7 @@ const CategoryItem = ({ title, img, selected, onClick }) => {
   return (
     <div onClick={onClick} className={`cursor-pointer relative`}>
       <div
-        className={`w-[180px] rounded-lg overflow-hidden h-[110px] relative border-[2px] border-transparent ${
+        className={`w-[150px] lg:w-[180px] rounded-lg overflow-hidden h-[100px] md:h-[110px] relative border-[2px] border-transparent ${
           selected && "border-red-600"
         }`}
       >
@@ -18,7 +18,7 @@ const CategoryItem = ({ title, img, selected, onClick }) => {
         />
       </div>
       <p
-        className={`text-center relative uppercase transition-all duration-200 text-[23px] ${
+        className={`text-center relative uppercase transition-all duration-200 text-[20px] md:text-[23px] ${
           selected && "text-red-600 mt-5"
         } `}
       >
