@@ -17,7 +17,7 @@ const Categories = ({ menu }) => {
   const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-full lg:w-[500px]  bg-neutral-900 min-h-[600px] text-white pt-5 overflow-hidden">
+    <div className="w-full lg:w-[500px]  bg-neutral-900 max-h-full text-white pt-5 overflow-hidden">
       <div className="relative border-b py-2 border-neutral-200">
         <CategorySwiper
           selected={selected}

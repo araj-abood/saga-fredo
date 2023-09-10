@@ -10,7 +10,7 @@ const FoodDrinks = () => {
 
   return (
     <ItemContextProvider>
-      <section className="">
+      <section className="h-screen z-50">
         <GenreSelector
           active={active}
           setActive={(type) => {
@@ -19,7 +19,7 @@ const FoodDrinks = () => {
         />
         <div className="relative flex max-lg:flex-col">
           <Categories menu={active === "food" ? menu[0] : menu[1]} />
-          <div className=" flex-1">
+          <div className=" flex-1 bg-white">
             <DisplayItem />
           </div>
         </div>
