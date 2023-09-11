@@ -37,18 +37,18 @@ const Header = () => {
     >
       <div className="flex h-full justify-between items-center px-2 text-xl lg:text-3xl lg:px-5 relative text-white  ">
         <a
-          className="hover:underline text-lg cursor-pointer underline-[2px] underline-[0px] transition-all duration-100"
+          className="hover:underline text-2xl cursor-pointer underline-[2px] underline-[0px] transition-all duration-100"
           href=""
         >
           Our Menu
         </a>
-        <ShoppingCart />
+        {/* <ShoppingCart /> */}
       </div>{" "}
       <div className="absolute w-fit top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <img
           src="https://segafredojo.com/cdn/shop/files/Logo-S-AI-white-s-white_200x.png?v=1683461848"
           alt=""
-          className="w-5 lg:w-6"
+          className="w-7 lg:w-9"
         />
       </div>
     </motion.header>

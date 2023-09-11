@@ -3,7 +3,6 @@ import CategoryItem from "./CategoryItem";
 import Arrow from "../UI/Arrow";
 import PlateItems from "./PlateItems";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import CategorySwiper from "./CategorySwiper";
 
 const Categories = ({ menu }) => {
@@ -17,7 +16,7 @@ const Categories = ({ menu }) => {
   const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-full lg:w-[500px]  bg-neutral-900 max-h-full text-white pt-5 overflow-hidden">
+    <div className="w-full lg:w-[500px]  bg-neutral-900 max-h-full text-white pt-1 overflow-hidden">
       <div className="relative border-b-[3px] py-2 border-red-700">
         <CategorySwiper
           selected={selected}

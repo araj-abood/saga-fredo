@@ -1,13 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { ItemContext } from "../../context/item-context";
 import { CartContext } from "../../context/cart-context";
 
 const PlateItems = ({ items }) => {
+  const divRef = useRef();
   const itemContext = useContext(ItemContext);
   const cartContext = useContext(CartContext);
 
+  useEffect(() => {
+    divRef.current.scrollTo({ top: 0 });
+  });
+
   return (
-    <div className={`h-[400px] overflow-y-scroll `}>
+    <div ref={divRef} className={`h-[400px] pb-14 top-0 overflow-y-scroll `}>
       <div className="flex flex-col mt-5 gap-4 px-5  ">
         {items.map((item, index) => {
           return (
@@ -44,14 +49,15 @@ const PlateItems = ({ items }) => {
                   </div>
                 </div>
                 <div className="flex  items-end">
-                  <button
+                  {/* THE ADD FOR THE PLATE ITEMS */}
+                  {/* <button
                     onClick={() => {
                       cartContext.addItemHandler(null, 1);
                     }}
                     className="bg-red-800 py-2 px-4 text-2xl transition-all duration-150 hover:bg-red-500"
                   >
                     Add
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

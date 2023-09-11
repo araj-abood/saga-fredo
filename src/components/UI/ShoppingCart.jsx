@@ -10,7 +10,7 @@ const ShoppingCart = () => {
   return (
     <div className="relative cursor-pointer">
       <div className=" p-2 bg-red-600/60 rounded-sm  cursor-pointer transition-all duration-150 hover:bg-red-600/80 flex items-center gap-4">
-        <ShoppingCartIcon className="  w-6 h-6 text-white " />
+        <ShoppingCartIcon className="  w-8 h-8 text-white " />
         <motion.p
           key={cartContext.cartItems.count}
           animate={{ scale: 1.1 }}

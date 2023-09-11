@@ -30,7 +30,7 @@ const DisplayItemContent = ({ item, onExit }) => {
               </p>
             </div>
             <p>{item.descrip}</p>
-            <div className=" flex flex-col gap-5 justify-center flex-1 ">
+            {/* <div className=" flex flex-col gap-5 justify-center flex-1 ">
               <div className="flex justify-end">
                 <DynamicAdder count={count} setCount={setCount} />
               </div>
@@ -42,7 +42,7 @@ const DisplayItemContent = ({ item, onExit }) => {
               >
                 Add
               </button>
-            </div>
+            </div> */}
           </div>
           {/* <div
             onClick={onExit}

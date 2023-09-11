@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import CategoryItem from "./CategoryItem";
 import { useDraggable } from "react-use-draggable-scroll";
 
@@ -12,7 +12,9 @@ const CategorySwiper = ({ categories, setSelected, selected }) => {
 
   useLayoutEffect(() => {
     setWidth(ref.current.offsetWidth);
-  }, []);
+  });
+
+  useEffect(() => {});
 
   const ratio = width / categories.length;
 
