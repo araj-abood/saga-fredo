@@ -25,10 +25,10 @@ const CategoryItem = ({ title, img, selected, onClick }) => {
         {title}
 
         {selected && (
-          <motion.div
+          <motion.span
             className=" absolute h-1 w-full -bottom-1 left-0 bg-red-600"
             layoutId="underline"
-          ></motion.div>
+          ></motion.span>
         )}
       </p>
     </div>

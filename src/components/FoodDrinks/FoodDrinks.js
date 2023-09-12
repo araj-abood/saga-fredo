@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import GenreSelector from "./GenreSelector";
 import Categories from "./Categories";
 import { menu } from "../../constants";
-import { ItemContextProvider } from "../../context/item-context";
 import DisplayItem from "../item/DisplayItem";
 import DrinkTypeSelector from "./DrinkTypeSelector";
 
@@ -20,8 +19,8 @@ const FoodDrinks = () => {
       : menu[1].types[1];
 
   return (
-    <ItemContextProvider>
-      <section className="h-screen z-50">
+    <section className=" flex-1 min-h-0  z-50">
+      <div className="flex  bg-red-400 h-full  flex-col">
         <GenreSelector
           active={active}
           setActive={(type) => {
@@ -38,14 +37,14 @@ const FoodDrinks = () => {
           />
         )}
 
-        <div className="relative flex  max-lg:flex-col">
+        <div className="relative min-h-0  flex-1 flex max-lg:flex-col">
           <Categories menu={display} />
-          <div className=" flex-1 bg-white">
+          <div className=" xl:flex-1  bg-white">
             <DisplayItem />
           </div>
         </div>
-      </section>
-    </ItemContextProvider>
+      </div>
+    </section>
   );
 };
 

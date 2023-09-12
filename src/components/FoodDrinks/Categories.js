@@ -9,14 +9,20 @@ const Categories = ({ menu }) => {
   const { categories } = menu;
   const [selected, setSelected] = useState(0);
 
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+
   useEffect(() => {
     setSelected(0);
   }, [menu]);
 
+  const scrollDownHandler = (bool) => {
+    setIsScrollingDown(true);
+  };
+
   const selectedItems = categories[selected] ? categories[selected].items : [];
 
   return (
-    <div className="w-full lg:w-[500px]  bg-neutral-900 max-h-full text-white pt-1 overflow-hidden">
+    <div className="w-full xl:w-[500px] flex-1 max-h-full  flex flex-col bg-neutral-900  text-white pt-1  overflow-hidden ">
       <div className="relative border-b-[3px] py-2 border-red-700">
         <CategorySwiper
           selected={selected}
@@ -47,8 +53,7 @@ const Categories = ({ menu }) => {
 
       {selectedItems.length !== 0 ? (
         <>
-          {" "}
-          <PlateItems items={selectedItems} />
+          <PlateItems onSrollDown={scrollDownHandler} items={selectedItems} />
         </>
       ) : (
         <h1 className="text-4xl text-center mt-10">No items</h1>

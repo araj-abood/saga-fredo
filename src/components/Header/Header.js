@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import ShoppingCart from "../UI/ShoppingCart";
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, y: "-100%" },
-};
+// const variants = {
+//   open: { opacity: 1, x: 0 },
+//   closed: { opacity: 0, y: "-100%" },
+// };
 
 const Header = () => {
   // const [show, setShow] = useState(false);
@@ -32,8 +32,8 @@ const Header = () => {
     <motion.header
       className=" main-hero relative bg-red-500/40 w-full h-[50px]  py-1 lg:py-5  px-2 lg:px-4 top-0 left-0  "
       // animate={show ? "open" : "closed"}
-      transition={{ delay: 0.1 }}
-      variants={variants}
+      // transition={{ delay: 0.1 }}
+      // variants={variants}
     >
       <div className="flex h-full justify-between items-center px-2 text-xl lg:text-3xl lg:px-5 relative text-white  ">
         <a

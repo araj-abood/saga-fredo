@@ -17,8 +17,6 @@
 body {
   /* font-family: "Roboto Slab", serif; */
   font-family: "Oswald", sans-serif;
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 @layer utilities {

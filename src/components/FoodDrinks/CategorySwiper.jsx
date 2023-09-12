@@ -6,8 +6,6 @@ const CategorySwiper = ({ categories, setSelected, selected }) => {
   const ref = useRef();
   // const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
 
-  console.log(ref);
-
   const [width, setWidth] = useState(0);
 
   useLayoutEffect(() => {
@@ -21,7 +19,9 @@ const CategorySwiper = ({ categories, setSelected, selected }) => {
   return (
     <div
       ref={ref}
-      style={{ left: `-${selected * ratio}px` }}
+      style={{
+        left: `-${selected * ratio}px`,
+      }}
       // {...events}
       // className={`transition-all w-full px-2  relative duration-150 ease-out  top-0 left-0 flex flex-row gap-5 pb-3  overflow-x-scroll`}
       className={`transition-all w-fit px-2  relative duration-150 ease-out  top-0 left-0 flex flex-row gap-5 pb-3  `}

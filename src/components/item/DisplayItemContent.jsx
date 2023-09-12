@@ -16,11 +16,14 @@ const DisplayItemContent = ({ item, onExit }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className=" max-lg:absolute top-0 left-0 z-20 h-full  w-full bg-neutral-600"
+        className=" max-xl:absolute  top-0 left-0 z-20 h-full  w-full bg-neutral-600"
       >
-        <div className="h-[500px] ml-0 relative overflow-hidden">
+        <div className="min-h-[500px] h-full ml-0 relative overflow-hidden">
           <img className="h-full  w-full object-cover" src={item.img} alt="" />
-          <div className="absolute min-h-[200px] flex flex-col z-20 bottom-0 text-white left-0 w-full bg-black/50 border-t border-white px-4 py-2">
+          <div
+            className="absolute h-1/2
+           min-h-[200px] flex flex-col z-20 bottom-0 text-white left-0 w-full bg-black/50 border-t border-white px-4 py-2"
+          >
             <div className="flex justify-between max-md:flex-col">
               <h1 className="  text-3xl xl:text-4xl text-red-500">
                 {item.title}

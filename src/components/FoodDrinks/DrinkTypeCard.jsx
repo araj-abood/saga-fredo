@@ -6,7 +6,7 @@ const DrinkTypeCard = ({ selected, img, title, onSelect }) => {
       onClick={onSelect}
       className="relative cursor-pointer max-sm:flex-1 sm:w-[180px] lg:w-[300px] flex justify-center items-center"
     >
-      <h1 className="relative rounded-lg z-40 w-fit bg-black/50 text-white py-2 px-4  text-xl lg:text-3xl ">
+      <h1 className="relative rounded-lg text-center z-40 w-fit bg-black/50 text-white py-2 px-4  text-xl lg:text-3xl ">
         {title}
       </h1>
       <img
